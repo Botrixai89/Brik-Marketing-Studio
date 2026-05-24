@@ -1,0 +1,180 @@
+@import "tailwindcss";
+
+@theme {
+  /* =========================
+     LIGHT MODE
+  ========================= */
+
+  --color-primary: #3da9d8;
+  --color-accent: #e2fe04;
+
+  --color-background: #ffffff;
+  --color-background-soft: #f4fbfe;
+  --color-surface: #ffffff;
+
+  --color-text: #0f172a;
+  --color-text-muted: #64748b;
+  --color-text-invert: #ffffff;
+
+  --color-border: rgba(61, 169, 216, 0.12);
+
+  --gradient-primary: linear-gradient(
+    135deg,
+    #ffffff 0%,
+    #eef8fd 50%,
+    #dff3fb 100%
+  );
+
+  --gradient-dark: linear-gradient(
+    135deg,
+    #071018 0%,
+    #0b1f2e 100%
+  );
+
+  --shadow-soft: 0 10px 40px rgba(61, 169, 216, 0.08);
+  --shadow-glow: 0 0 30px rgba(226, 254, 4, 0.25);
+
+  --radius-xl: 24px;
+  --radius-2xl: 32px;
+}
+
+/* =========================
+   DARK MODE
+========================= */
+
+.dark {
+  --color-primary: #55b9e4;
+  --color-accent: #e2fe04;
+
+  --color-background: #071018;
+  --color-background-soft: #0d1720;
+  --color-surface: #101c27;
+
+  --color-text: #f8fafc;
+  --color-text-muted: #94a3b8;
+  --color-text-invert: #071018;
+
+  --color-border: rgba(255, 255, 255, 0.08);
+
+  --gradient-primary: linear-gradient(
+    135deg,
+    #071018 0%,
+    #0b1f2e 50%,
+    #13293d 100%
+  );
+
+  --gradient-dark: linear-gradient(
+    135deg,
+    #020617 0%,
+    #071018 100%
+  );
+
+  --shadow-soft: 0 10px 40px rgba(0, 0, 0, 0.35);
+  --shadow-glow: 0 0 35px rgba(226, 254, 4, 0.18);
+
+  --brick-stroke: color-mix(in srgb, var(--color-accent) 58%, transparent);
+}
+
+/* =========================
+   GLOBAL STYLES
+========================= */
+
+html {
+  scroll-behavior: smooth;
+  --brick-stroke: color-mix(in srgb, var(--color-primary) 48%, transparent);
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-family: "Inter", sans-serif;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+/* =========================
+   REUSABLE UTILITIES
+========================= */
+
+.glass {
+  background: color-mix(in srgb, var(--color-surface) 62%, transparent);
+  backdrop-filter: blur(16px) saturate(1.15);
+  -webkit-backdrop-filter: blur(16px) saturate(1.15);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-soft);
+}
+
+.dark .glass {
+  background: color-mix(in srgb, var(--color-surface) 48%, transparent);
+}
+
+.card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-soft);
+}
+
+.glow {
+  box-shadow: var(--shadow-glow);
+}
+
+.section-padding {
+  padding: 120px 0;
+}
+
+.container-custom {
+  width: min(1200px, 92%);
+  margin-inline: auto;
+}
+
+.text-gradient {
+  background: linear-gradient(
+    90deg,
+    var(--color-primary),
+    var(--color-accent)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Premium loader */
+@keyframes load {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+/* Custom cursor — desktop only */
+@media (pointer: fine) {
+  .custom-cursor-active,
+  .custom-cursor-active * {
+    cursor: none !important;
+  }
+}
+
+/* Hero stat labels on dark */
+#home .text-text-muted {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+#home .text-text {
+  color: #fff;
+}
+
+#automation .text-text-muted {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+#automation .text-text {
+  color: #fff;
+}
+
+/* Anchor offset for fixed nav */
+section[id] {
+  scroll-margin-top: 5rem;
+}
