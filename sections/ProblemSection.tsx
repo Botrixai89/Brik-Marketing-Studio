@@ -15,11 +15,11 @@ import { RevealOnScroll } from "@/components/ui/RevealOnScroll";
 const PAIN_POINTS = [
   {
     icon: Users,
-    text: "You have a social media manager, an ads freelancer, a web developer, and a designer — and nobody talks to each other.",
+    text: "You have a social media manager, an ads freelancer, a web developer, and a designer and nobody talks to each other.",
   },
   {
     icon: BarChart2,
-    text: "You run ads but cannot tell whether they actually brought in revenue — or just clicks.",
+    text: "You run ads but cannot tell whether they actually brought in revenue or just clicks.",
   },
   {
     icon: TrendingDown,
@@ -73,7 +73,7 @@ export function ProblemSection() {
         </RevealOnScroll>
 
         <div className="mt-10">
-          <MagneticButton href="/#contact" variant="primary">
+          <MagneticButton href="/contact" variant="primary">
             Sound familiar? Let us look at your business together.
           </MagneticButton>
         </div>

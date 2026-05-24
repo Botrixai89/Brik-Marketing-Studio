@@ -108,7 +108,7 @@ export function AboutSection() {
         </div>
 
         <div className="mt-10">
-          <MagneticButton href="/#contact" variant="primary">
+          <MagneticButton href="/contact" variant="primary">
             Work directly with the founders — book a discovery call.
           </MagneticButton>
         </div>

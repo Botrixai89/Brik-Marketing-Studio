@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { FaWhatsapp } from "react-icons/fa";
 import { useGsapContext } from "@/hooks/useGsapContext";
 import {
   FOOTER_COMPANY,
@@ -107,8 +108,9 @@ export function Footer() {
                 href={whatsappUrl()}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-primary"
+                className="flex items-center gap-2 hover:text-primary"
               >
+                <FaWhatsapp className="h-4 w-4 shrink-0" />
                 WhatsApp: Direct chat
               </a>
             </li>
@@ -122,7 +124,7 @@ export function Footer() {
           © {year} {SITE.name}. All rights reserved.
         </p>
         <p className="mt-2">
-          Raipur · Dubai · Mumbai — India&apos;s growth partner for ambitious
+          Raipur · Dubai · Mumbai, India&apos;s growth partner for ambitious
           businesses.
         </p>
       </div>

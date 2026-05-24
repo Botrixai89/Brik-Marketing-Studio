@@ -6,15 +6,7 @@ import { useEffect, useRef } from "react";
 import { MagneticButton } from "@/components/ui/MagneticButton";
 import { GridBackground } from "@/components/ui/GridBackground";
 import { NoiseOverlay } from "@/components/ui/NoiseOverlay";
-import { AnimatedCounter } from "@/components/ui/AnimatedCounter";
 import { useGsapContext } from "@/hooks/useGsapContext";
-
-const HERO_STATS = [
-  { value: 30, suffix: "+", label: "Businesses Served" },
-  { value: 150, suffix: "+", label: "Consultations Done" },
-  { value: 30, suffix: "+", label: "Team Members Nationally" },
-  { value: 8, suffix: "+", label: "Cities across India" },
-];
 
 export function HeroSection() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -68,7 +60,7 @@ export function HeroSection() {
     <section
       ref={sectionRef}
       id="home"
-      className="relative min-h-[100dvh] overflow-hidden pt-8 pb-20"
+      className="relative min-h-[100dvh] overflow-hidden pt-6 pb-10"
     >
       <div
         className="absolute inset-0 -z-10"
@@ -90,10 +82,10 @@ export function HeroSection() {
         <div className="absolute bottom-[25%] right-[15%] h-24 w-24 rotate-12 rounded-2xl border border-accent/30 bg-accent/10" />
       </div>
 
-      <div className="container-custom relative z-10 flex min-h-[calc(100dvh-5rem)] flex-col items-center justify-center text-center">
+      <div className="container-custom relative z-10 flex min-h-[100dvh] flex-col items-center justify-center pt-20 text-center">
         <p
           data-hero-fade
-          className="mb-6 text-xs font-semibold uppercase tracking-[0.3em] text-primary/90"
+          className="mb-3 text-xs font-semibold uppercase tracking-[0.3em] text-primary/90"
         >
           BRIK Marketing &amp; Automation Studio
         </p>
@@ -119,17 +111,14 @@ export function HeroSection() {
             >
               marketing
             </span>
-            ,
-          </span>
-          <span data-line className="block">
-            systems &amp;{" "}
+            {", systems & "}
             <span
               style={{
                 display: "inline",
                 background: "rgba(61,169,216,0.08)",
                 color: "#3da9d8",
                 border: "1.5px solid #3da9d8",
-                padding: "0em 0.1em",
+                padding: "0.06em 0.18em",
                 borderRadius: "0.18em",
                 fontWeight: 700,
                 boxShadow: "0 0 18px rgba(61,169,216,0.12)",
@@ -143,28 +132,21 @@ export function HeroSection() {
 
         <p
           data-hero-fade
-          className="mt-8 max-w-2xl text-lg leading-relaxed text-white/70 sm:text-xl"
+          className="mt-4 max-w-xl text-sm leading-relaxed text-white/55 sm:text-base"
         >
-          From business consultation to AI automation — BRIK builds the
-          complete infrastructure your business needs to attract, convert, and
-          retain customers at scale.
-        </p>
-
-        <p data-hero-fade className="mt-4 text-sm text-white/50">
-          Serving 50+ businesses across India. Office in Raipur · Mumbai
-          (August 2025).
+          Strategy, creativity, performance &amp; AI - one team, one roof.
         </p>
 
         <div
           data-hero-fade
-          className="mt-10 flex flex-wrap items-center justify-center gap-4"
+          className="mt-6 flex flex-wrap items-center justify-center gap-4"
         >
-          <MagneticButton href="/#contact" variant="primary">
-            Book Your Free Discovery Call
+          <MagneticButton href="/contact" variant="primary">
+            Book a Free Discovery Call
             <ChevronRight className="h-4 w-4" />
           </MagneticButton>
           <MagneticButton
-            href="/#work"
+            href="/work"
             variant="secondary"
             className="border-white/30 text-white hover:bg-white/10"
           >
@@ -172,23 +154,9 @@ export function HeroSection() {
           </MagneticButton>
         </div>
 
-        <p data-hero-fade className="mt-6 text-sm text-white/45">
-          30-minute call. No pitch. Just an honest look at your business.
+        <p data-hero-fade className="mt-3 text-xs text-white/35">
+          30 min · no pitch · honest advice
         </p>
-
-        <div
-          data-hero-fade
-          className="mt-16 grid grid-cols-2 gap-x-10 gap-y-6 border-t border-white/10 pt-10 sm:grid-cols-4"
-        >
-          {HERO_STATS.map((stat) => (
-            <AnimatedCounter
-              key={stat.label}
-              value={stat.value}
-              suffix={stat.suffix}
-              label={stat.label}
-            />
-          ))}
-        </div>
 
         <Link
           href="/#problem"

@@ -26,11 +26,11 @@ type NavItem = {
 
 const NAV_ITEMS: NavItem[] = [
   { label: "Home", href: "/", icon: Home },
-  { label: "Services", href: "/#services", icon: Layers },
-  { label: "Our Work", href: "/#work", icon: Briefcase },
-  { label: "About", href: "/#about", icon: Users },
-  { label: "Blog", href: "/#blog", icon: FileText },
-  { label: "Book a Call", href: "/#contact", icon: Phone, cta: true },
+  { label: "Services", href: "/services", icon: Layers },
+  { label: "Our Work", href: "/work", icon: Briefcase },
+  { label: "About", href: "/about", icon: Users },
+  { label: "Blog", href: "/blog", icon: FileText },
+  { label: "Book a Call", href: "/contact", icon: Phone, cta: true },
 ];
 
 export function Navbar() {

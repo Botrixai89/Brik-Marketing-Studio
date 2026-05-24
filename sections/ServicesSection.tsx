@@ -61,7 +61,7 @@ export function ServicesSection() {
         </p>
 
         <div className="mt-8 flex justify-center">
-          <MagneticButton href="/#contact" variant="primary">
+          <MagneticButton href="/contact" variant="primary">
             Not sure which pillars you need? We&apos;ll map it in 20 minutes.
           </MagneticButton>
         </div>

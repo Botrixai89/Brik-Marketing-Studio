@@ -113,7 +113,7 @@ export function AutomationSection() {
         </p>
 
         <div className="mt-8">
-          <MagneticButton href="/#contact" variant="primary">
+          <MagneticButton href="/contact" variant="primary">
             Map what we would automate for your business — free.
           </MagneticButton>
         </div>

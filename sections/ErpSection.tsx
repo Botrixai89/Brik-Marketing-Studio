@@ -116,7 +116,7 @@ export function ErpSection() {
         </p>
 
         <div className="mt-8">
-          <MagneticButton href="/#contact" variant="primary">
+          <MagneticButton href="/contact" variant="primary">
             Not sure if your business needs ERP? 30-minute free consultation.
           </MagneticButton>
         </div>

@@ -135,7 +135,7 @@ export function ProcessSection() {
           This is not a one-month retainer. This is a growth partnership.
         </p>
         <div className="mt-6">
-          <MagneticButton href="/#contact" variant="primary">
+          <MagneticButton href="/contact" variant="primary">
             Ready to start at Step 1? Book your discovery call.
           </MagneticButton>
         </div>
