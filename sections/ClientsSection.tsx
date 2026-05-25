@@ -101,7 +101,7 @@ export function ClientsSection() {
         </div>
 
         <div className="mt-10">
-          <MagneticButton href={whatsappUrl()} external variant="secondary">
+          <MagneticButton href={whatsappUrl()} external variant="primary">
             Want to see the strategy behind one of these? Ask us.
           </MagneticButton>
         </div>

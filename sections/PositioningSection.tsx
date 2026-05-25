@@ -83,7 +83,7 @@ export function PositioningSection() {
         </p>
 
         <div className="mt-8">
-          <MagneticButton href="/#process" variant="secondary">
+          <MagneticButton href="/#process" variant="primary">
             See how we actually work
           </MagneticButton>
         </div>

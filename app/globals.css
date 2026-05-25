@@ -1,15 +1,12 @@
 @import "tailwindcss";
 
 @theme {
-  /* =========================
-     LIGHT MODE
-  ========================= */
-
   --color-primary: #3da9d8;
   --color-accent: #e2fe04;
 
   --color-background: #ffffff;
   --color-background-soft: #f4fbfe;
+  --color-footer-background-soft: #55b9e4;
   --color-surface: #ffffff;
 
   --color-text: #0f172a;
@@ -48,6 +45,7 @@
 
   --color-background: #071018;
   --color-background-soft: #0d1720;
+  --color-footer-background-soft: #0d1720;
   --color-surface: #101c27;
 
   --color-text: #f8fafc;

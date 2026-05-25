@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { FaWhatsapp } from "react-icons/fa";
+import { FaInstagram, FaWhatsapp } from "react-icons/fa";
 import { useGsapContext } from "@/hooks/useGsapContext";
 import {
   FOOTER_COMPANY,
@@ -10,6 +10,7 @@ import {
   SITE,
   whatsappUrl,
 } from "@/constants/site";
+import { FaI, FaTwitter } from "react-icons/fa6";
 
 export function Footer() {
   const year = new Date().getFullYear();
@@ -25,16 +26,16 @@ export function Footer() {
   }, []);
 
   return (
-    <footer className="relative border-t border-border bg-background-soft section-padding pb-8 pt-16">
+    <footer className="relative border-t border-border bg-footer-background-soft section-padding pb-8 pt-16 border-2 border-red-600">
       <div className="container-custom grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
         <div data-footer-item>
           <Link href="/" aria-label="BRIK home">
             <Image
               src="/logo.png"
               alt="BRIK"
-              width={120}
-              height={40}
-              className="h-10 w-auto object-contain"
+              width={180}
+              height={60}
+              className="h-14 w-auto object-contain"
             />
           </Link>
           <p className="mt-4 text-sm text-text-muted">{SITE.tagline}</p>
@@ -93,17 +94,7 @@ export function Footer() {
             Connect
           </p>
           <ul className="mt-4 space-y-2 text-sm text-text-muted">
-            <li>
-              <a
-                href={`https://instagram.com/${SITE.instagram.replace("@", "")}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-primary"
-              >
-                Instagram: {SITE.instagram}
-              </a>
-            </li>
-            <li>
+                      <li>
               <a
                 href={whatsappUrl()}
                 target="_blank"
@@ -111,7 +102,9 @@ export function Footer() {
                 className="flex items-center gap-2 hover:text-primary"
               >
                 <FaWhatsapp className="h-4 w-4 shrink-0" />
-                WhatsApp: Direct chat
+                <FaInstagram className="h-4 w-4 shrink-0" />
+                <FaTwitter className="h-4 w-4 shrink-0" />
+                
               </a>
             </li>
             <li>{SITE.domain}</li>

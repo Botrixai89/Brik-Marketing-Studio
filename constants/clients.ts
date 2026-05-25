@@ -15,7 +15,7 @@ export const CLIENT_NAMES = [
   "Mahajan Travels",
   "Salika Marketing",
   "GD Goenka School",
-  "Botrix AI",
+  "BotrixAI",
   "Khatri Automations",
   "Orion World",
   "House of Surfaces",
@@ -63,7 +63,7 @@ export const FEATURED_CLIENTS: ClientShowcase[] = [
     description: "Digital presence built for discovery and booking intent.",
   },
   {
-    name: "Botrix AI",
+    name: "BotrixAI",
     industry: "Technology",
     services: ["Brand strategy", "Web", "Performance marketing"],
     description: "Tech brand positioning with conversion-focused web presence.",
